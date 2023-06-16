@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/5.1.0/marked.min.js" integrity="sha512-j5KAPeir0rGl+OSddiUeUtUlG+GK7acI/kNQqrpjSSB1IlDUbj3VnQOyoW3GWpPj7i8CSfb0T+Q4IRHxAPRxCA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="JS/script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="CSS/styles.css" rel="stylesheet"/>
+    <title>A Markdown Previewer</title>
+  </head>
+
+  <body onload="setDefault()" class="bg-primary">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col text-center text-white bg-primary my-3">
+          <h1>Markdown Previewer</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 bg-primary d-flex flex-column my-3">
+          <h2 class="text-white text-center my-2">Editor</h2>
+          <div class="form-group flex-grow-1 d-flex flex-column">
+            <textarea id="editor" onkeyup="updatePreview()" class="form-control flex-grow-1 bg-dark text-white"></textarea>
+          </div>
+        </div>
+        <div class="col-md-6 bg-primary my-3">
+          <h2 class="text-white text-center my-2">Preview</h2>
+          <div class="bg-dark text-white p-3 d-flex flex-column display_body" id="preview"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bootstraps JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Freecodecamp JavaScript -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
